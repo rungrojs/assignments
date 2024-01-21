@@ -32,7 +32,6 @@ export default function Testing({ navigation }: any) {
   const [finalScore, setFinalScore] = useState<RankingModel>();
 
   let carousel: any;
-  let submitButton: any;
 
   useFocusEffect(
     useCallback(() => {
@@ -62,7 +61,6 @@ export default function Testing({ navigation }: any) {
   };
 
   let submitAnswer = _debounce(() => {
-    submitButton.disabled = true;
     let userAnswers = questions.map((t) => {
       return { id: t.id, selectedAnswer: t.selectedAnswer };
     });
@@ -175,9 +173,6 @@ export default function Testing({ navigation }: any) {
             Cancel
           </Button>
           <Button
-            ref={(s) => {
-              submitButton = s;
-            }}
             style={{ paddingLeft: 5, paddingRight: 5, marginLeft: 10 }}
             mode="contained"
             onPress={() => submitAnswer()}>
