@@ -153,7 +153,7 @@ export default function Testing({ navigation }: any) {
       )}
 
       <Dialog visible={showConfirm} onDismiss={() => setShowConfirm(false)}>
-        <Dialog.Title>Confirm sumbit your answer?</Dialog.Title>
+        <Dialog.Title>Please confirm the submission of your answers.</Dialog.Title>
         <Dialog.Content>
           <Text variant="titleSmall" style={{ marginBottom: 10 }}>
             Please submit your name:
