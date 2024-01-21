@@ -20,6 +20,7 @@ function findCommonPrefix(datas: string[]): string {
     // for large string, use concatenate.
     return result.join('');
 }
+
 assert.strictEqual(findCommonPrefix(["flower", "flow", "flight"]), 'fl', 'Should return "fl"')
 assert.strictEqual(findCommonPrefix(["dog", "racecar", "car"]), '', 'Should return ""')
 assert.strictEqual(findCommonPrefix(["carcare", "car", "carcare"]), 'car', 'Should return "car"')
